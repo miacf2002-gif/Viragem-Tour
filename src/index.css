@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,600&family=Outfit:wght@300;400;500;600;700&display=swap');
+@import 'tailwindcss';
+
+@theme {
+  --color-gold: #c9a96e;
+  --color-gold-light: #e8d5b0;
+  --color-cream: #faf6ef;
+  --color-sand: #f0e8d8;
+  --color-charcoal: #1c1c1c;
+  --color-warm-gray: #7a7060;
+  --color-border: #ddd5c4;
+  --color-whatsapp: #25d366;
+  --color-whatsapp-dark: #1aa851;
+
+  --font-serif: 'Fraunces', Georgia, serif;
+  --font-sans: 'Outfit', system-ui, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Outfit', system-ui, sans-serif;
+  background-color: #faf6ef;
+  color: #1c1c1c;
+  -webkit-font-smoothing: antialiased;
+}
+
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #c9a96e66; border-radius: 3px; }

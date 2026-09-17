@@ -1,0 +1,12 @@
+{
+  "title": "Viragem Tour | Tours em Lisboa",
+  "description": "Tours autênticos em Lisboa com guia local, experiências personalizadas e contacto rápido por WhatsApp.",
+  "language": "pt-PT",
+  "robots": {
+    "index": true
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
