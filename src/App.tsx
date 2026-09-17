@@ -148,6 +148,24 @@ const advantages = [
   },
 ]
 
+function BrandLogo({ light = false, className = '' }: { light?: boolean; className?: string }) {
+  return (
+    <img
+      src={logoImg}
+      alt="Viragem Tour"
+      className={`${className}`}
+      style={{
+        width: light ? '110px' : '150px',
+        height: 'auto',
+        display: 'block',
+        objectFit: 'contain',
+        filter: light ? 'brightness(0) invert(1)' : 'none',
+        opacity: light ? 1 : 1,
+      }}
+    />
+  )
+}
+
 function toDateIsoValue(date: Date) {
   const offset = date.getTimezoneOffset() * 60000
   return new Date(date.getTime() - offset).toISOString().slice(0, 10)
@@ -466,12 +484,8 @@ export default function App() {
         }`}
       >
         <div className="max-w-7xl mx-auto px-6 lg:px-10 h-[72px] flex items-center justify-between">
-          <a href="#">
-            <img
-              src={logoImg}
-              alt="Viragem Tour"
-              className={`h-9 w-auto transition-all duration-300 ${scrolled ? 'brightness-0 invert' : 'brightness-0 invert'}`}
-            />
+          <a href="#" aria-label="Viragem Tour" className="flex items-center justify-center">
+            <BrandLogo light className="h-auto max-h-10 w-auto" />
           </a>
 
           {/* Desktop nav */}
@@ -533,8 +547,8 @@ export default function App() {
 
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
           {/* Logo grande no hero */}
-          <div className="flex justify-center mb-10">
-            <img src={logoImg} alt="Viragem Tour" className="h-16 md:h-20 w-auto brightness-0 invert opacity-90" />
+          <div className="mb-10 flex justify-center">
+            <BrandLogo light className="h-auto w-[220px] md:w-[280px]" />
           </div>
 
           <h1 style={{ fontFamily: "'Fraunces', Georgia, serif" }}
@@ -903,7 +917,7 @@ export default function App() {
               </div>
 
               <div className="mt-10">
-                <img src={logoImg} alt="Viragem Tour" className="h-10 w-auto opacity-25" />
+                <BrandLogo className="opacity-25" />
               </div>
             </div>
 
@@ -971,7 +985,7 @@ export default function App() {
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <div className="flex flex-col md:flex-row items-center md:items-start justify-between gap-10 pb-10 border-b border-white/8">
             <div>
-              <img src={logoImg} alt="Viragem Tour" className="h-10 w-auto brightness-0 invert opacity-70 mb-4" />
+              <BrandLogo light className="mb-4 opacity-70" />
               <p className="text-[#7a7060] font-light text-sm max-w-xs leading-relaxed">
                 Tours exclusivos em Lisboa. Experiências autênticas, guia local, memórias para sempre.
               </p>
