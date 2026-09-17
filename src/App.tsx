@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react'
-import logoImg from '@/imports/Viragem_logo.png'
 
 const WHATSAPP_NUMBER = '351913977456'
 const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001'
@@ -151,7 +150,7 @@ const advantages = [
 function BrandLogo({ light = false, className = '' }: { light?: boolean; className?: string }) {
   return (
     <img
-      src={logoImg}
+      src="/Viragem_logo.png"
       alt="Viragem Tour"
       className={`${className}`}
       style={{
