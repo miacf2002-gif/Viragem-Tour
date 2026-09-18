@@ -1,28 +1,21 @@
-# Deploy do site Viragem Tour
+# Deploy do site Viragem Tour no Render
 
-## 1. Frontend no Vercel
+O frontend e o backend correm juntos num único Web Service. Não é necessário usar o Vercel.
 
-1. Acede a https://vercel.com
-2. Importa este repositório
-3. Framework Preset: Vite
-4. Build Command: `npm run build`
-5. Output Directory: `dist`
-6. Adiciona estas variáveis de ambiente:
-   - `VITE_API_URL=https://SEU-BACKEND-RENDER-URL`
-   - `VITE_MANAGER_PASSWORD=sua_password_secreta`
-
-## 2. Backend no Render
+## 1. Criar o serviço
 
 1. Acede a https://render.com
-2. Cria um Web Service
-3. Conecta o mesmo repositório
-4. Usar o comando de build: `npm install`
-5. Usar o comando de arranque: `npm start`
-6. Adiciona estas variáveis de ambiente:
+2. Cria um Web Service e liga o repositório
+3. Usa:
+   - Build Command: `npm install && npm run build`
+   - Start Command: `npm start`
+4. Adiciona estas variáveis de ambiente:
    - `PORT=3001`
    - `GOOGLE_SERVICE_ACCOUNT_JSON={...}`
    - `GOOGLE_CALENDAR_ID=SEU_CALENDAR_ID`
    - `VITE_MANAGER_PASSWORD=sua_password_secreta`
+
+O Render atribui automaticamente a variável `PORT`. O valor definido no ficheiro serve apenas para desenvolvimento local.
 
 ## 3. Google Calendar
 
@@ -42,4 +35,4 @@
 ## 5. Atualizar depois
 
 - Altera texto, imagens e experiências aqui no workspace
-- Depois faz um novo deploy no Vercel e no Render
+- Depois faz um novo deploy no Render
